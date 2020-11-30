@@ -40,12 +40,21 @@ export default class App extends Component {
 		this.setState({todos:newTodos})
 	}
 
+	//删除一个todo的回调
+	deleteTodo = (id)=>{
+		const {todos} = this.state
+		const newTodos = todos.filter((t)=>{
+			return t.id !== id
+		})
+		this.setState({todos:newTodos})
+	}
+
 	render() {
 		return (
 			<div className="todo-container">
 				<div className="todo-wrap">
 					<Header addTodo={this.addTodo}/>
-					<List todos={this.state.todos} checkTodo={this.checkTodo}/>
+					<List todos={this.state.todos} checkTodo={this.checkTodo} deleteTodo={this.deleteTodo}/>
 					<Footer/>
 				</div>
 			</div>

@@ -15,9 +15,18 @@ export default class Item extends Component {
 		}
 	}
 
+	//鼠标移入移出的回调
 	handleMouse = (mouseIn)=>{
 		return ()=>{
 			this.setState({mouseIn})
+		}
+	}
+
+	//删除按钮的回调
+	handleDelete = (id)=>{
+		/* eslint-disable */
+		if(confirm('确认删除吗？')){
+			this.props.deleteTodo(id)
 		}
 	}
 
@@ -29,7 +38,7 @@ export default class Item extends Component {
 				<label>
 					<input type="checkbox" checked={done} onChange={this.handleCheck(id)}/> <span>{name}</span>
 				</label>
-				<button className="btn btn-danger" style={{display:mouseIn ? 'block' :'none'}}>删除</button>
+				<button className="btn btn-danger" onClick={()=>this.handleDelete(id)} style={{display:mouseIn ? 'block' :'none'}}>删除</button>
 			</li>
 		)
 	}
