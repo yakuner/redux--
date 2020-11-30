@@ -15,7 +15,7 @@ export default class Search extends Component {
 			},
 			error => {
 				console.log('失败了',error);
-				//请求成功了要：存储错误信息，将isLoading变为false
+				//请求失败了要：存储错误信息，将isLoading变为false
 				this.props.updateAppState({isLoading:false,errorMsg:error.message})
 			}
 		)
