@@ -7267,7 +7267,7 @@ nan@^2.12.1:
 
 nanoid@^3.1.18:
   version "3.1.18"
-  resolved "https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.18.tgz?cache=0&sync_timestamp=1605907985484&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnanoid%2Fdownload%2Fnanoid-3.1.18.tgz#0680db22ab01c372e89209f5d18283d98de3e96d"
+  resolved "https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.18.tgz#0680db22ab01c372e89209f5d18283d98de3e96d"
   integrity sha1-BoDbIqsBw3Lokgn10YKD2Y3j6W0=
 
 nanomatch@^1.2.9:

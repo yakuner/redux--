@@ -16,11 +16,25 @@ export default class App extends Component {
 		]
 	}
 
+	//状态在哪里，操作状态的方法就在哪里
+	addTodo = (todoObj)=>{
+		//获取原来的todos
+		const {todos} = this.state
+		//更新状态
+		this.setState({todos:[todoObj,...todos]})
+
+		//不推荐下面的写法，因为如下写法通过非setState形式修改了state中的值
+		//因而如下写法，会导致某些情况下，状态不更新
+		/* let {todos} = this.state
+		todos.unshift(todoObj)
+		this.setState({todos}) */
+	}
+
 	render() {
 		return (
 			<div className="todo-container">
 				<div className="todo-wrap">
-					<Header/>
+					<Header addTodo={this.addTodo}/>
 					<List todos={this.state.todos}/>
 					<Footer/>
 				</div>
