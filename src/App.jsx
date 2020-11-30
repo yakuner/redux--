@@ -24,7 +24,7 @@ export default class App extends Component {
 		this.setState({todos:[todoObj,...todos]})
 
 		//不推荐下面的写法，因为如下写法通过非setState形式修改了state中的值
-		//因而如下写法，会导致某些情况下，状态不更新
+		//因而如下写法，在某些情况下状态不更新
 		/* let {todos} = this.state
 		todos.unshift(todoObj)
 		this.setState({todos}) */
