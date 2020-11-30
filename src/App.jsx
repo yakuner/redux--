@@ -30,12 +30,22 @@ export default class App extends Component {
 		this.setState({todos}) */
 	}
 
+	//勾选or取消勾选一个todo的回调
+	checkTodo = (id,done)=>{
+		const {todos} = this.state
+		const newTodos = todos.map((t)=>{
+			if(t.id === id) return {...t,done}
+			else return t
+		})
+		this.setState({todos:newTodos})
+	}
+
 	render() {
 		return (
 			<div className="todo-container">
 				<div className="todo-wrap">
 					<Header addTodo={this.addTodo}/>
-					<List todos={this.state.todos}/>
+					<List todos={this.state.todos} checkTodo={this.checkTodo}/>
 					<Footer/>
 				</div>
 			</div>
