@@ -3,10 +3,14 @@ import './index.css'
 
 export default class List extends Component {
 	render() {
+		const {users,isLoading,isFirst,errorMsg} = this.props
 		return (
 			<div className="row">
 				{
-					this.props.users.map((userObj,index)=>{
+					isFirst ? <h1>欢迎使用</h1> : 
+					isLoading ? <h1>Loading......</h1> :
+					errorMsg ? <h1>{errorMsg}</h1> :
+					users.map((userObj,index)=>{
 						return (
 							<div className="card" key={index}>
 								<a href={userObj.html_url} rel="noreferrer" target="_blank">
