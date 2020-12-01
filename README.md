@@ -18,4 +18,13 @@
 					1.先订阅，再发布（理解：有一种隔空对话的感觉）
 					2.适用于任意组件间通信
 					3.要在组件的componentWillUnmount中取消订阅
-			
+
+		
+## 3.路由的基本使用
+			1.安装react-router-dom库
+			2.明确好界面中的导航区、展示区，准备好Home组件、About组件
+			3.导航区的a标签改为Link标签
+						<Link to="/xxxxx">Demo</Link>
+			4.展示区写Route标签进行路径的匹配
+						<Route path='/xxxx' component={Demo}/>
+			5.<App>的最外侧包裹了一个<BrowserRouter>或<HashRouter>
