@@ -67,3 +67,8 @@
 												params: {}
 												path: "/about"
 												url: "/about"
+												
+## 6.解决多级路径刷新页面样式丢失的问题
+				1.public/index.html 中 引入样式时不写 ./ 写 / （常用）
+				2.public/index.html 中 引入样式时不写 ./ 写 %PUBLIC_URL% （常用）
+				3.使用HashRouter
