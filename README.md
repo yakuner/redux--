@@ -43,20 +43,13 @@
 						一般组件：写组件标签时传递了什么，就能收到什么
 						路由组件：接收到三个固定的属性
 										history:
-												action: "PUSH"
-												block: ƒ block(prompt)
-												createHref: ƒ createHref(location)
 												go: ƒ go(n)
 												goBack: ƒ goBack()
 												goForward: ƒ goForward()
-												length: 2
-												listen: ƒ listen(listener)
 												push: ƒ push(path, state)
 												replace: ƒ replace(path, state)
 
 										location:
-												hash: ""
-												key: "ndkhwh"
 												pathname: "/about"
 												search: ""
 												state: null
